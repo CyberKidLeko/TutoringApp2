@@ -16,5 +16,25 @@ namespace TutoringApp
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.IsMdiContainer= true;
+            form1.Show();
+
+            Welcome welcome= new Welcome();
+            welcome.MdiParent = form1;
+            welcome.Show();
+
+            Login login= new Login();
+            login.MdiParent = form1;
+
+            Register register = new Register();
+            register.MdiParent = form1;
+
+            Dashboard dashboard = new Dashboard();
+            dashboard.MdiParent = form1;
+        }
     }
 }

@@ -24,7 +24,7 @@ namespace TutoringApp
 
         private void Register_Load(object sender, EventArgs e)
         {
-
+            this.BackColor = ColorTranslator.FromHtml("#457C9E");
         }
     }
 }

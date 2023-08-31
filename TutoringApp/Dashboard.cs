@@ -16,5 +16,15 @@ namespace TutoringApp
         {
             InitializeComponent();
         }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            this.BackColor = ColorTranslator.FromHtml("#457C9E");
+        }
+
+        private void label24_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
