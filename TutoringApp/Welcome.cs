@@ -21,5 +21,19 @@ namespace TutoringApp
         {
            
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Show();
+            this.Hide();
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            Register reg = new Register();
+            reg.Show();
+            this.Hide();
+        }
     }
 }

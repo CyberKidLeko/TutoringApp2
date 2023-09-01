@@ -16,5 +16,13 @@ namespace TutoringApp
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Welcome welcome = new Welcome();
+            welcome.Show();
+            this.Hide();
+
+        }
     }
 }
