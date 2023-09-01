@@ -14,7 +14,7 @@ namespace TutoringApp
 {
     public partial class Register : Form
     {
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ramah\Downloads\Group Project\Group Project\Group Project\TutoringApp\EduGuide.mdf"";Integrated Security=True";
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\Source\Repos\TutoringApp2\TutoringApp\EduGuide.mdf;Integrated Security=True";
        
         public Register()
         {
