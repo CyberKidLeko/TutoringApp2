@@ -40,55 +40,53 @@
             // User_ID
             // 
             this.User_ID.AutoSize = true;
-            this.User_ID.Location = new System.Drawing.Point(204, 110);
-            this.User_ID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.User_ID.Location = new System.Drawing.Point(272, 135);
             this.User_ID.Name = "User_ID";
-            this.User_ID.Size = new System.Drawing.Size(58, 13);
+            this.User_ID.Size = new System.Drawing.Size(73, 16);
             this.User_ID.TabIndex = 0;
             this.User_ID.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(206, 138);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(275, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.Size = new System.Drawing.Size(70, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(260, 62);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(328, 85);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.Size = new System.Drawing.Size(85, 32);
             this.label3.TabIndex = 2;
             this.label3.Text = "Login";
             // 
             // txtUser_ID
             // 
-            this.txtUser_ID.Location = new System.Drawing.Point(276, 105);
-            this.txtUser_ID.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUser_ID.Location = new System.Drawing.Point(368, 129);
+            this.txtUser_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUser_ID.Name = "txtUser_ID";
-            this.txtUser_ID.Size = new System.Drawing.Size(76, 20);
+            this.txtUser_ID.Size = new System.Drawing.Size(100, 22);
             this.txtUser_ID.TabIndex = 3;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(276, 136);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPassword.Location = new System.Drawing.Point(368, 167);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(76, 20);
+            this.txtPassword.Size = new System.Drawing.Size(100, 22);
             this.txtPassword.TabIndex = 4;
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(285, 215);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogin.Location = new System.Drawing.Point(380, 265);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(56, 19);
+            this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -97,18 +95,20 @@
             // checkBoxIsTutor
             // 
             this.checkBoxIsTutor.AutoSize = true;
-            this.checkBoxIsTutor.Location = new System.Drawing.Point(263, 185);
+            this.checkBoxIsTutor.Location = new System.Drawing.Point(351, 228);
+            this.checkBoxIsTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkBoxIsTutor.Name = "checkBoxIsTutor";
-            this.checkBoxIsTutor.Size = new System.Drawing.Size(100, 17);
+            this.checkBoxIsTutor.Size = new System.Drawing.Size(120, 20);
             this.checkBoxIsTutor.TabIndex = 6;
             this.checkBoxIsTutor.Text = "are you a tutor?";
             this.checkBoxIsTutor.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.checkBoxIsTutor);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -116,7 +116,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.User_ID);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);

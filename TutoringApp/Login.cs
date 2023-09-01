@@ -30,7 +30,7 @@ namespace TutoringApp
         {
             id = txtUser_ID.Text;
             return id;
-        }
+        }//
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String table = " ";
@@ -74,6 +74,7 @@ namespace TutoringApp
                         MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string membershipType = getMember();
                         Dashboard dash = new Dashboard();
+                        dash.SetLoggedInUser(username, membershipType);
                         dash.SetMembershipType(membershipType); // Set the membership type
                         dash.Show();
                         this.Hide();

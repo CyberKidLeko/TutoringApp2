@@ -39,11 +39,9 @@
             this.dataGridViewAppointments = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPageBookAppointment = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
+            this.btnBook = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridViewAvailableTutors = new System.Windows.Forms.DataGridView();
-            this.cmbModuleFilter = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -86,6 +84,8 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblSurname = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.Dash.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
@@ -209,11 +209,11 @@
             // 
             // tabPageBookAppointment
             // 
-            this.tabPageBookAppointment.Controls.Add(this.button1);
-            this.tabPageBookAppointment.Controls.Add(this.label7);
+            this.tabPageBookAppointment.Controls.Add(this.dateTimePicker1);
+            this.tabPageBookAppointment.Controls.Add(this.txtSearch);
+            this.tabPageBookAppointment.Controls.Add(this.btnBook);
             this.tabPageBookAppointment.Controls.Add(this.label6);
             this.tabPageBookAppointment.Controls.Add(this.dataGridViewAvailableTutors);
-            this.tabPageBookAppointment.Controls.Add(this.cmbModuleFilter);
             this.tabPageBookAppointment.Controls.Add(this.label5);
             this.tabPageBookAppointment.Location = new System.Drawing.Point(4, 22);
             this.tabPageBookAppointment.Margin = new System.Windows.Forms.Padding(2);
@@ -224,25 +224,16 @@
             this.tabPageBookAppointment.Text = "Book Appointment";
             this.tabPageBookAppointment.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnBook
             // 
-            this.button1.Location = new System.Drawing.Point(83, 244);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Book";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(7, 246);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 13);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "book selected:";
+            this.btnBook.Location = new System.Drawing.Point(181, 325);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBook.Name = "btnBook";
+            this.btnBook.Size = new System.Drawing.Size(162, 26);
+            this.btnBook.TabIndex = 5;
+            this.btnBook.Text = "Book";
+            this.btnBook.UseVisualStyleBackColor = true;
+            this.btnBook.Click += new System.EventHandler(this.btnBook_Click);
             // 
             // label6
             // 
@@ -264,15 +255,6 @@
             this.dataGridViewAvailableTutors.RowTemplate.Height = 24;
             this.dataGridViewAvailableTutors.Size = new System.Drawing.Size(566, 181);
             this.dataGridViewAvailableTutors.TabIndex = 2;
-            // 
-            // cmbModuleFilter
-            // 
-            this.cmbModuleFilter.FormattingEnabled = true;
-            this.cmbModuleFilter.Location = new System.Drawing.Point(104, 13);
-            this.cmbModuleFilter.Margin = new System.Windows.Forms.Padding(2);
-            this.cmbModuleFilter.Name = "cmbModuleFilter";
-            this.cmbModuleFilter.Size = new System.Drawing.Size(92, 21);
-            this.cmbModuleFilter.TabIndex = 1;
             // 
             // label5
             // 
@@ -727,6 +709,21 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Profile";
             // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(107, 12);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(100, 20);
+            this.txtSearch.TabIndex = 6;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(7, 259);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -770,11 +767,9 @@
         private System.Windows.Forms.Label lblFilterByModule;
         private System.Windows.Forms.TextBox txtSearchByTutor;
         private System.Windows.Forms.Label lblSearchByTutor;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridViewAvailableTutors;
-        private System.Windows.Forms.ComboBox cmbModuleFilter;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -816,5 +811,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
