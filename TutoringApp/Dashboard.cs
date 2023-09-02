@@ -674,6 +674,8 @@ namespace TutoringApp
             if (result == DialogResult.Yes)
             {   
                 this.Close();
+                Welcome welcome = new Welcome();
+                welcome.Show();
             }
         }
     }

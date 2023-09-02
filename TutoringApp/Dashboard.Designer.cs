@@ -184,7 +184,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(9, 319);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(265, 22);
             this.dateTimePicker1.TabIndex = 7;
@@ -192,7 +192,7 @@
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(143, 15);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(132, 22);
             this.txtSearch.TabIndex = 6;
@@ -259,7 +259,7 @@
             // 
             this.panel1.Controls.Add(this.listBoxProfile);
             this.panel1.Location = new System.Drawing.Point(8, 27);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 176);
             this.panel1.TabIndex = 5;
@@ -270,7 +270,7 @@
             this.listBoxProfile.FormattingEnabled = true;
             this.listBoxProfile.ItemHeight = 16;
             this.listBoxProfile.Location = new System.Drawing.Point(5, 0);
-            this.listBoxProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxProfile.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxProfile.Name = "listBoxProfile";
             this.listBoxProfile.Size = new System.Drawing.Size(740, 180);
             this.listBoxProfile.TabIndex = 0;
