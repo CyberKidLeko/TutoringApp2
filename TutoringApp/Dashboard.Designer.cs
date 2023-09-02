@@ -30,8 +30,6 @@
         {
             this.Dash = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.txtSearchByTutor = new System.Windows.Forms.TextBox();
-            this.lblSearchByTutor = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbFilterByModule = new System.Windows.Forms.ComboBox();
@@ -46,43 +44,24 @@
             this.dataGridViewAvailableTutors = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listBoxProfile = new System.Windows.Forms.ListBox();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnUpdatePassword = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
+            this.txtConfirmNewPassword = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtCurrentPassword = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnUpdateModule3 = new System.Windows.Forms.Button();
-            this.btnUpdateEmail = new System.Windows.Forms.Button();
-            this.txtUpdateEmail = new System.Windows.Forms.TextBox();
+            this.btnUpdatePhone = new System.Windows.Forms.Button();
+            this.txtUpdatePhone = new System.Windows.Forms.TextBox();
             this.btnUpdateModule1 = new System.Windows.Forms.Button();
-            this.btnUpdateModule2 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
-            this.cmbUpdateModule3 = new System.Windows.Forms.ComboBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.cmbUpdateModule2 = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.cmbUpdateModule1 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblModule3 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.lblModule2 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblModule1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.lblUserType = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblStudentNo = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblSurname = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Dash.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -90,9 +69,9 @@
             this.tabPageBookAppointment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailableTutors)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Dash
@@ -100,7 +79,7 @@
             this.Dash.Controls.Add(this.tabPage1);
             this.Dash.Controls.Add(this.tabPageBookAppointment);
             this.Dash.Controls.Add(this.tabPage3);
-            this.Dash.Location = new System.Drawing.Point(12, 2);
+            this.Dash.Location = new System.Drawing.Point(12, 0);
             this.Dash.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dash.Name = "Dash";
             this.Dash.SelectedIndex = 0;
@@ -110,8 +89,6 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
-            this.tabPage1.Controls.Add(this.txtSearchByTutor);
-            this.tabPage1.Controls.Add(this.lblSearchByTutor);
             this.tabPage1.Controls.Add(this.btnCancel);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.cmbFilterByModule);
@@ -127,37 +104,21 @@
             this.tabPage1.Text = "Appointments";
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
-            // txtSearchByTutor
-            // 
-            this.txtSearchByTutor.Location = new System.Drawing.Point(219, 295);
-            this.txtSearchByTutor.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtSearchByTutor.Name = "txtSearchByTutor";
-            this.txtSearchByTutor.Size = new System.Drawing.Size(151, 22);
-            this.txtSearchByTutor.TabIndex = 7;
-            // 
-            // lblSearchByTutor
-            // 
-            this.lblSearchByTutor.AutoSize = true;
-            this.lblSearchByTutor.Location = new System.Drawing.Point(5, 299);
-            this.lblSearchByTutor.Name = "lblSearchByTutor";
-            this.lblSearchByTutor.Size = new System.Drawing.Size(136, 16);
-            this.lblSearchByTutor.TabIndex = 6;
-            this.lblSearchByTutor.Text = "Search by tutor name:";
-            // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(219, 324);
+            this.btnCancel.Location = new System.Drawing.Point(219, 308);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(149, 23);
             this.btnCancel.TabIndex = 5;
             this.btnCancel.Text = "CANCEL";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 327);
+            this.label3.Location = new System.Drawing.Point(9, 311);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 16);
             this.label3.TabIndex = 4;
@@ -171,6 +132,7 @@
             this.cmbFilterByModule.Name = "cmbFilterByModule";
             this.cmbFilterByModule.Size = new System.Drawing.Size(151, 24);
             this.cmbFilterByModule.TabIndex = 3;
+            this.cmbFilterByModule.SelectedIndexChanged += new System.EventHandler(this.cmbFilterByModule_SelectedIndexChanged);
             // 
             // lblFilterByModule
             // 
@@ -280,9 +242,10 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(87)))), ((int)(((byte)(149)))), ((int)(((byte)(179)))));
+            this.tabPage3.Controls.Add(this.panel1);
+            this.tabPage3.Controls.Add(this.btnLogout);
             this.tabPage3.Controls.Add(this.groupBox3);
             this.tabPage3.Controls.Add(this.groupBox2);
-            this.tabPage3.Controls.Add(this.groupBox1);
             this.tabPage3.Controls.Add(this.label8);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -292,17 +255,47 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Profile";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listBoxProfile);
+            this.panel1.Location = new System.Drawing.Point(8, 27);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(751, 176);
+            this.panel1.TabIndex = 5;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // listBoxProfile
+            // 
+            this.listBoxProfile.FormattingEnabled = true;
+            this.listBoxProfile.ItemHeight = 16;
+            this.listBoxProfile.Location = new System.Drawing.Point(5, 0);
+            this.listBoxProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxProfile.Name = "listBoxProfile";
+            this.listBoxProfile.Size = new System.Drawing.Size(740, 180);
+            this.listBoxProfile.TabIndex = 0;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(571, 434);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(125, 23);
+            this.btnLogout.TabIndex = 28;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnUpdatePassword);
-            this.groupBox3.Controls.Add(this.btnLogout);
             this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.txtConfirmPassword);
+            this.groupBox3.Controls.Add(this.txtConfirmNewPassword);
             this.groupBox3.Controls.Add(this.label22);
             this.groupBox3.Controls.Add(this.txtNewPassword);
             this.groupBox3.Controls.Add(this.txtCurrentPassword);
             this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Location = new System.Drawing.Point(11, 368);
+            this.groupBox3.Location = new System.Drawing.Point(11, 330);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -313,23 +306,14 @@
             // 
             // btnUpdatePassword
             // 
-            this.btnUpdatePassword.Location = new System.Drawing.Point(335, 69);
+            this.btnUpdatePassword.Location = new System.Drawing.Point(335, 46);
             this.btnUpdatePassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdatePassword.Name = "btnUpdatePassword";
             this.btnUpdatePassword.Size = new System.Drawing.Size(125, 23);
             this.btnUpdatePassword.TabIndex = 30;
             this.btnUpdatePassword.Text = "Update";
             this.btnUpdatePassword.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(563, 47);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(125, 23);
-            this.btnLogout.TabIndex = 28;
-            this.btnLogout.Text = "LOGOUT";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnUpdatePassword.Click += new System.EventHandler(this.btnUpdatePassword_Click);
             // 
             // label23
             // 
@@ -340,13 +324,13 @@
             this.label23.TabIndex = 26;
             this.label23.Text = "Confirm new password";
             // 
-            // txtConfirmPassword
+            // txtConfirmNewPassword
             // 
-            this.txtConfirmPassword.Location = new System.Drawing.Point(160, 71);
-            this.txtConfirmPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtConfirmPassword.Name = "txtConfirmPassword";
-            this.txtConfirmPassword.Size = new System.Drawing.Size(152, 22);
-            this.txtConfirmPassword.TabIndex = 26;
+            this.txtConfirmNewPassword.Location = new System.Drawing.Point(160, 71);
+            this.txtConfirmNewPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConfirmNewPassword.Name = "txtConfirmNewPassword";
+            this.txtConfirmNewPassword.Size = new System.Drawing.Size(152, 22);
+            this.txtConfirmNewPassword.TabIndex = 26;
             // 
             // label22
             // 
@@ -384,56 +368,39 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnUpdateModule3);
-            this.groupBox2.Controls.Add(this.btnUpdateEmail);
-            this.groupBox2.Controls.Add(this.txtUpdateEmail);
+            this.groupBox2.Controls.Add(this.btnUpdatePhone);
+            this.groupBox2.Controls.Add(this.txtUpdatePhone);
             this.groupBox2.Controls.Add(this.btnUpdateModule1);
-            this.groupBox2.Controls.Add(this.btnUpdateModule2);
             this.groupBox2.Controls.Add(this.label20);
-            this.groupBox2.Controls.Add(this.cmbUpdateModule3);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.cmbUpdateModule2);
-            this.groupBox2.Controls.Add(this.label18);
             this.groupBox2.Controls.Add(this.cmbUpdateModule1);
             this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Location = new System.Drawing.Point(11, 222);
+            this.groupBox2.Location = new System.Drawing.Point(11, 214);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox2.Size = new System.Drawing.Size(752, 140);
+            this.groupBox2.Size = new System.Drawing.Size(744, 111);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Update Details";
             // 
-            // btnUpdateModule3
+            // btnUpdatePhone
             // 
-            this.btnUpdateModule3.Location = new System.Drawing.Point(335, 76);
-            this.btnUpdateModule3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdateModule3.Name = "btnUpdateModule3";
-            this.btnUpdateModule3.Size = new System.Drawing.Size(125, 23);
-            this.btnUpdateModule3.TabIndex = 34;
-            this.btnUpdateModule3.Text = "Update";
-            this.btnUpdateModule3.UseVisualStyleBackColor = true;
-            this.btnUpdateModule3.Click += new System.EventHandler(this.btnUpdateModule3_Click);
+            this.btnUpdatePhone.Location = new System.Drawing.Point(335, 60);
+            this.btnUpdatePhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdatePhone.Name = "btnUpdatePhone";
+            this.btnUpdatePhone.Size = new System.Drawing.Size(125, 23);
+            this.btnUpdatePhone.TabIndex = 33;
+            this.btnUpdatePhone.Text = "Update";
+            this.btnUpdatePhone.UseVisualStyleBackColor = true;
+            this.btnUpdatePhone.Click += new System.EventHandler(this.btnUpdateEmail_Click);
             // 
-            // btnUpdateEmail
+            // txtUpdatePhone
             // 
-            this.btnUpdateEmail.Location = new System.Drawing.Point(335, 106);
-            this.btnUpdateEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdateEmail.Name = "btnUpdateEmail";
-            this.btnUpdateEmail.Size = new System.Drawing.Size(125, 23);
-            this.btnUpdateEmail.TabIndex = 33;
-            this.btnUpdateEmail.Text = "Update";
-            this.btnUpdateEmail.UseVisualStyleBackColor = true;
-            this.btnUpdateEmail.Click += new System.EventHandler(this.btnUpdateEmail_Click);
-            // 
-            // txtUpdateEmail
-            // 
-            this.txtUpdateEmail.Location = new System.Drawing.Point(160, 110);
-            this.txtUpdateEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUpdateEmail.Name = "txtUpdateEmail";
-            this.txtUpdateEmail.Size = new System.Drawing.Size(152, 22);
-            this.txtUpdateEmail.TabIndex = 22;
+            this.txtUpdatePhone.Location = new System.Drawing.Point(160, 59);
+            this.txtUpdatePhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUpdatePhone.Name = "txtUpdatePhone";
+            this.txtUpdatePhone.Size = new System.Drawing.Size(152, 22);
+            this.txtUpdatePhone.TabIndex = 22;
             // 
             // btnUpdateModule1
             // 
@@ -446,61 +413,14 @@
             this.btnUpdateModule1.UseVisualStyleBackColor = true;
             this.btnUpdateModule1.Click += new System.EventHandler(this.btnUpdateModule1_Click);
             // 
-            // btnUpdateModule2
-            // 
-            this.btnUpdateModule2.Location = new System.Drawing.Point(335, 48);
-            this.btnUpdateModule2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdateModule2.Name = "btnUpdateModule2";
-            this.btnUpdateModule2.Size = new System.Drawing.Size(125, 23);
-            this.btnUpdateModule2.TabIndex = 31;
-            this.btnUpdateModule2.Text = "Update";
-            this.btnUpdateModule2.UseVisualStyleBackColor = true;
-            this.btnUpdateModule2.Click += new System.EventHandler(this.btnUpdateModule2_Click);
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(5, 110);
+            this.label20.Location = new System.Drawing.Point(8, 59);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(91, 16);
+            this.label20.Size = new System.Drawing.Size(97, 16);
             this.label20.TabIndex = 21;
-            this.label20.Text = "Update email:";
-            // 
-            // cmbUpdateModule3
-            // 
-            this.cmbUpdateModule3.FormattingEnabled = true;
-            this.cmbUpdateModule3.Location = new System.Drawing.Point(160, 79);
-            this.cmbUpdateModule3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbUpdateModule3.Name = "cmbUpdateModule3";
-            this.cmbUpdateModule3.Size = new System.Drawing.Size(152, 24);
-            this.cmbUpdateModule3.TabIndex = 20;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(5, 79);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(115, 16);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Change Module 3:";
-            // 
-            // cmbUpdateModule2
-            // 
-            this.cmbUpdateModule2.FormattingEnabled = true;
-            this.cmbUpdateModule2.Location = new System.Drawing.Point(160, 48);
-            this.cmbUpdateModule2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cmbUpdateModule2.Name = "cmbUpdateModule2";
-            this.cmbUpdateModule2.Size = new System.Drawing.Size(152, 24);
-            this.cmbUpdateModule2.TabIndex = 18;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(5, 48);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(115, 16);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "Change Module 2:";
+            this.label20.Text = "Update Phone:";
             // 
             // cmbUpdateModule1
             // 
@@ -510,6 +430,7 @@
             this.cmbUpdateModule1.Name = "cmbUpdateModule1";
             this.cmbUpdateModule1.Size = new System.Drawing.Size(152, 24);
             this.cmbUpdateModule1.TabIndex = 16;
+            this.cmbUpdateModule1.SelectedIndexChanged += new System.EventHandler(this.cmbUpdateModule1_SelectedIndexChanged);
             // 
             // label17
             // 
@@ -519,157 +440,6 @@
             this.label17.Size = new System.Drawing.Size(115, 16);
             this.label17.TabIndex = 15;
             this.label17.Text = "Change Module 1:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.lblModule3);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.lblModule2);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.label11);
-            this.groupBox1.Controls.Add(this.lblModule1);
-            this.groupBox1.Controls.Add(this.label10);
-            this.groupBox1.Controls.Add(this.lblUserType);
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.lblStudentNo);
-            this.groupBox1.Controls.Add(this.lblName);
-            this.groupBox1.Controls.Add(this.lblEmail);
-            this.groupBox1.Controls.Add(this.lblSurname);
-            this.groupBox1.Location = new System.Drawing.Point(11, 27);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(752, 188);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Personal details";
-            // 
-            // lblModule3
-            // 
-            this.lblModule3.AutoSize = true;
-            this.lblModule3.Location = new System.Drawing.Point(347, 153);
-            this.lblModule3.Name = "lblModule3";
-            this.lblModule3.Size = new System.Drawing.Size(59, 16);
-            this.lblModule3.TabIndex = 14;
-            this.lblModule3.Text = "Module3";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(5, 153);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(62, 16);
-            this.label14.TabIndex = 6;
-            this.label14.Text = "Modules:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(5, 126);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 16);
-            this.label13.TabIndex = 5;
-            this.label13.Text = "UserType";
-            // 
-            // lblModule2
-            // 
-            this.lblModule2.AutoSize = true;
-            this.lblModule2.Location = new System.Drawing.Point(253, 153);
-            this.lblModule2.Name = "lblModule2";
-            this.lblModule2.Size = new System.Drawing.Size(59, 16);
-            this.lblModule2.TabIndex = 13;
-            this.lblModule2.Text = "Module2";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(5, 98);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(103, 16);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "Student number:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(5, 70);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 16);
-            this.label11.TabIndex = 3;
-            this.label11.Text = "Email:";
-            // 
-            // lblModule1
-            // 
-            this.lblModule1.AutoSize = true;
-            this.lblModule1.Location = new System.Drawing.Point(160, 153);
-            this.lblModule1.Name = "lblModule1";
-            this.lblModule1.Size = new System.Drawing.Size(59, 16);
-            this.lblModule1.TabIndex = 12;
-            this.lblModule1.Text = "Module1";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 43);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(64, 16);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Surname:";
-            // 
-            // lblUserType
-            // 
-            this.lblUserType.AutoSize = true;
-            this.lblUserType.Location = new System.Drawing.Point(160, 126);
-            this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(68, 16);
-            this.lblUserType.TabIndex = 11;
-            this.lblUserType.Text = "UserType";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(5, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 16);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Name:";
-            // 
-            // lblStudentNo
-            // 
-            this.lblStudentNo.AutoSize = true;
-            this.lblStudentNo.Location = new System.Drawing.Point(160, 98);
-            this.lblStudentNo.Name = "lblStudentNo";
-            this.lblStudentNo.Size = new System.Drawing.Size(103, 16);
-            this.lblStudentNo.TabIndex = 10;
-            this.lblStudentNo.Text = "Student number:";
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(160, 18);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(44, 16);
-            this.lblName.TabIndex = 7;
-            this.lblName.Text = "Name";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(160, 70);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(44, 16);
-            this.lblEmail.TabIndex = 9;
-            this.lblEmail.Text = "Email:";
-            // 
-            // lblSurname
-            // 
-            this.lblSurname.AutoSize = true;
-            this.lblSurname.Location = new System.Drawing.Point(160, 43);
-            this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(64, 16);
-            this.lblSurname.TabIndex = 8;
-            this.lblSurname.Text = "Surname:";
             // 
             // label8
             // 
@@ -700,12 +470,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAvailableTutors)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -722,51 +491,30 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbFilterByModule;
         private System.Windows.Forms.Label lblFilterByModule;
-        private System.Windows.Forms.TextBox txtSearchByTutor;
-        private System.Windows.Forms.Label lblSearchByTutor;
         private System.Windows.Forms.Button btnBook;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridViewAvailableTutors;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtUpdateEmail;
+        private System.Windows.Forms.TextBox txtUpdatePhone;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.ComboBox cmbUpdateModule3;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.ComboBox cmbUpdateModule2;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ComboBox cmbUpdateModule1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblModule3;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblModule2;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label lblModule1;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblUserType;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblStudentNo;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblSurname;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnUpdatePassword;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtConfirmPassword;
+        private System.Windows.Forms.TextBox txtConfirmNewPassword;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtCurrentPassword;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Button btnUpdateModule3;
-        private System.Windows.Forms.Button btnUpdateEmail;
+        private System.Windows.Forms.Button btnUpdatePhone;
         private System.Windows.Forms.Button btnUpdateModule1;
-        private System.Windows.Forms.Button btnUpdateModule2;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListBox listBoxProfile;
     }
 }
