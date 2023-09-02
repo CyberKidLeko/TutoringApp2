@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.User_ID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.checkBoxIsTutor = new System.Windows.Forms.CheckBox();
+            this.pbButton = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbButton)).BeginInit();
             this.SuspendLayout();
             // 
             // User_ID
@@ -96,12 +99,23 @@
             // 
             this.checkBoxIsTutor.AutoSize = true;
             this.checkBoxIsTutor.Location = new System.Drawing.Point(351, 228);
-            this.checkBoxIsTutor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.checkBoxIsTutor.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsTutor.Name = "checkBoxIsTutor";
             this.checkBoxIsTutor.Size = new System.Drawing.Size(120, 20);
             this.checkBoxIsTutor.TabIndex = 6;
             this.checkBoxIsTutor.Text = "are you a tutor?";
             this.checkBoxIsTutor.UseVisualStyleBackColor = true;
+            // 
+            // pbButton
+            // 
+            this.pbButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbButton.Image = ((System.Drawing.Image)(resources.GetObject("pbButton.Image")));
+            this.pbButton.Location = new System.Drawing.Point(12, 12);
+            this.pbButton.Name = "pbButton";
+            this.pbButton.Size = new System.Drawing.Size(46, 35);
+            this.pbButton.TabIndex = 7;
+            this.pbButton.TabStop = false;
+            this.pbButton.Click += new System.EventHandler(this.pbButton_Click);
             // 
             // Login
             // 
@@ -109,6 +123,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbButton);
             this.Controls.Add(this.checkBoxIsTutor);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -119,6 +134,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Login";
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.pbButton)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,5 +149,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.CheckBox checkBoxIsTutor;
+        private System.Windows.Forms.PictureBox pbButton;
     }
 }

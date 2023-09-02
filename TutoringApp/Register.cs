@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TutoringApp
 {
@@ -101,40 +102,63 @@ namespace TutoringApp
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtName.Text == "" || txtSurname.Text == "" || txtSurname.Text == "" || txtUserID.Text == "")
-                {
-                    MessageBox.Show("Enter all required information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-
-
+            errorProvider1.Clear(); // Clear any previous error icons
             // Get common user inputs from controls
             string name = txtName.Text;
             string surname = txtSurname.Text;
-            string User_ID = txtUserID.Text;
+            int User_ID;
             string password = txtPassword.Text;
             string confirmPassword = txtConfirmPassword.Text;
-            int phone = int.Parse(txtPhone.Text);
+            int phone;
 
-            
+
+            if (string.IsNullOrWhiteSpace(name))
+            {
+                errorProvider1.SetError(txtName, "Name is required");
+            }
+
+            if (string.IsNullOrWhiteSpace(surname))
+            {
+                errorProvider1.SetError(txtSurname, "Surname is required");
+            }
+
+            if (!int.TryParse(txtUserID .Text, out User_ID))
+            {
+                errorProvider1.SetError(txtUserID, "User ID is required");
+            }
+
+            if (!int.TryParse(txtPhone.Text, out phone))
+            {
+                errorProvider1.SetError(txtPhone, "Phone number is required");
+            }
+
+
+
+            if (password.Length < 8)
+            {
+                errorProvider1.SetError(txtPassword, "The password must be at least 8 characters long.");
+            }
+            else if (!password.Any(char.IsDigit))
+            {
+                errorProvider1.SetError(txtPassword, "The password must contain at least 1 number.");
+            }
+            else if (!password.Any(c => "!@#$%^&*()".Contains(c)))
+            {
+                errorProvider1.SetError(txtPassword, "The password must contain at least 1 special character.");
+            }
+            else
+            {
+                // Password meets all conditions; clear any error icon
+                errorProvider1.SetError(txtPassword, "");
+            }
+
+
+
+
 
             if (password != confirmPassword)
             {
-                MessageBox.Show("Passwords do not match. Please re-enter.");
-                txtPassword.Clear();
-                txtConfirmPassword.Clear();
-                txtPassword.Focus();
-                return;
+                errorProvider1.SetError(txtConfirmPassword, "The password must contain at least 1 special character.");
             }
 
             try
@@ -195,6 +219,10 @@ namespace TutoringApp
                         log.Show();
                         this.Hide();
                     }
+                    else
+                    {
+                        errorProvider1.SetError(radioButtonTutor, "Select a Student or tutor");
+                    }
 
                     connection.Close();
                 }
@@ -209,6 +237,13 @@ namespace TutoringApp
         private void radioButtonTutor_CheckedChanged(object sender, EventArgs e)
         {
             groupBoxModuleDetails.Visible = radioButtonTutor.Checked;
+        }
+
+        private void pbButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Welcome welcome = new Welcome();
+            welcome.Show();
         }
     }
 }

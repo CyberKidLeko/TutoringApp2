@@ -17,7 +17,7 @@ namespace TutoringApp
         public string loggedInUsername;
         public string loggedInPassword;
         public string membershipType;
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ramah\Downloads\TutoringApp2 (1)\TutoringApp2\TutoringApp\EduGuide.mdf"";Integrated Security=True";
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\OneDrive\Desktop\LatestTutorApp\TutoringApp\EduGuide.mdf;Integrated Security=True";
         
         public Dashboard()
         {

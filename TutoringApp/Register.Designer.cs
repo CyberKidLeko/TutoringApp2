@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,9 +51,13 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.buttonRegister = new System.Windows.Forms.Button();
+            this.pbButton = new System.Windows.Forms.PictureBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBoxModuleDetails.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -268,12 +274,28 @@
             this.buttonRegister.UseVisualStyleBackColor = true;
             this.buttonRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
+            // pbButton
+            // 
+            this.pbButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbButton.Image = ((System.Drawing.Image)(resources.GetObject("pbButton.Image")));
+            this.pbButton.Location = new System.Drawing.Point(9, 0);
+            this.pbButton.Name = "pbButton";
+            this.pbButton.Size = new System.Drawing.Size(55, 39);
+            this.pbButton.TabIndex = 27;
+            this.pbButton.TabStop = false;
+            this.pbButton.Click += new System.EventHandler(this.pbButton_Click);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
             this.ClientSize = new System.Drawing.Size(800, 670);
+            this.Controls.Add(this.pbButton);
             this.Controls.Add(this.buttonRegister);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBoxModuleDetails);
@@ -291,6 +313,8 @@
             this.groupBoxModuleDetails.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,5 +343,7 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button buttonRegister;
+        private System.Windows.Forms.PictureBox pbButton;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

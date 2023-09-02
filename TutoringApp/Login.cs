@@ -19,7 +19,7 @@ namespace TutoringApp
         SqlDataAdapter adapter;
         SqlDataReader reader;
         public string id;
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=""C:\Users\ramah\Downloads\TutoringApp2 (1)\TutoringApp2\TutoringApp\EduGuide.mdf"";Integrated Security=True";
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\OneDrive\Desktop\LatestTutorApp\TutoringApp\EduGuide.mdf;Integrated Security=True";
         public Login()
         {
             InitializeComponent();
@@ -113,6 +113,13 @@ namespace TutoringApp
         private void Login_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pbButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Welcome welcome = new Welcome();    
+            welcome.Show(); 
         }
     }
 }
