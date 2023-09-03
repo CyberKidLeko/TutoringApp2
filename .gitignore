@@ -317,6 +317,10 @@ __pycache__/
 # Tabs Studio
 *.tss
 
+# Ignore database files
+*.mdf
+*.ldf
+
 # Telerik's JustMock configuration file
 *.jmconfig
 
