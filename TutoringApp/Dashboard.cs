@@ -207,10 +207,43 @@ namespace TutoringApp
                         }
                     }
                 }
+                PopulateModuleComboBox();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
+        private void PopulateModuleComboBox()
+        {
+            // Clear existing items in the ComboBox
+            cmbFilterByModule.Items.Clear();
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string moduleQuery = "SELECT DISTINCT Module_Code FROM Appointment";
+
+                    using (SqlCommand command = new SqlCommand(moduleQuery, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string moduleCode = reader.GetString(0);
+                                cmbFilterByModule.Items.Add(moduleCode);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -276,8 +309,7 @@ namespace TutoringApp
                         using (SqlConnection connection = new SqlConnection(connectionString))
                         {
                             connection.Open();
-
-                        string insertQuery = "INSERT INTO Appointment (Student_ID, Tutor_ID, Module_Code, Date) VALUES (@Student_ID, @Tutor_ID, @Module_Code, @Date)";
+                            string insertQuery = "INSERT INTO Appointment (Student_ID, Tutor_ID, Module_Code, Date) VALUES (@Student_ID, @Tutor_ID, @Module_Code, @Date)";
 
                         using (SqlCommand command = new SqlCommand(insertQuery, connection))
                         {
@@ -286,6 +318,9 @@ namespace TutoringApp
                             command.Parameters.AddWithValue("@Module_Code", moduleCode);
                             command.Parameters.AddWithValue("@Date", dateTime.Date); // Assuming dateTime is a DateTime object
                             command.ExecuteNonQuery();
+
+                            //filling the gridview after booking
+                            LoadAppointmentsForUser(loggedInUsername, membershipType);
 
                             MessageBox.Show("Booking successful!");
                             }
