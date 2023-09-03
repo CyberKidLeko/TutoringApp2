@@ -17,8 +17,8 @@ namespace TutoringApp
         public string loggedInUsername;
         public string loggedInPassword;
         public string membershipType;
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\OneDrive\Desktop\LatestTutorApp\TutoringApp\EduGuide.mdf;Integrated Security=True";
-        
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\flore\OneDrive\Documents\TutoringApp2\TutoringApp\EduGuide.mdf;Integrated Security=True";
+
         public Dashboard()
         {
             InitializeComponent();
@@ -124,22 +124,58 @@ namespace TutoringApp
 
 
         private void LoadAppointmentsForUser(string username, string membershipType)
+
         {
             string appointmentsQuery = "";
 
             if (membershipType == "Tutor")
             {
-                // Query appointments for tutors from the Appointments table
                 appointmentsQuery = "SELECT * FROM Appointment WHERE Tutor_ID = @Username";
             }
             else if (membershipType == "Student")
             {
-                // Query appointments for students from the Appointments table
                 appointmentsQuery = "SELECT * FROM Appointment WHERE Student_ID = @Username";
             }
             else
             {
-                // Handle invalid user type
+                return;
+            }
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(appointmentsQuery, connection))
+                    {
+                        command.Parameters.AddWithValue("@Username", username);
+
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable appointmentsTable = new DataTable();
+                        adapter.Fill(appointmentsTable);
+
+                        // Populate the DataGridView with appointments
+                        dataGridViewAppointments.DataSource = appointmentsTable;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+            appointmentsQuery = "";
+
+            if (membershipType == "Tutor")
+            {
+                appointmentsQuery = "SELECT * FROM Appointment WHERE Tutor_ID = @Username";
+            }
+            else if (membershipType == "Student")
+            {
+                appointmentsQuery = "SELECT * FROM Appointment WHERE Student_ID = @Username";
+            }
+            else
+            {
                 return;
             }
 
@@ -546,8 +582,9 @@ namespace TutoringApp
         }
 
         private void PopulateProfileListBox()
+
         {
-            listBoxProfile.Items.Clear(); // Clear the ListBox to start fresh
+            listBoxProfile.Items.Clear();
 
             try
             {
@@ -558,17 +595,14 @@ namespace TutoringApp
 
                     if (membershipType == "Student")
                     {
-                        // Query profile information for the student
                         profileQuery = "SELECT Student_ID, Student_FirstName, Student_LastName, Phone_Number FROM Student WHERE Student_ID = @Username";
                     }
                     else if (membershipType == "Tutor")
                     {
-                        // Query profile information for the tutor
                         profileQuery = "SELECT Tutor_ID, Tutor_FirstName, Tutor_LastName, Phone_Number, Module_Code FROM Tutor WHERE Tutor_ID = @Username";
                     }
                     else
                     {
-                        // Handle other user types if needed
                         return;
                     }
 
@@ -578,21 +612,20 @@ namespace TutoringApp
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            if (reader.Read())
+                            while (reader.Read())
                             {
-                                // Read User ID as an integer
-                                int userID = reader.GetInt32(0);
-                                string firstName = reader.GetString(1);
-                                string lastName = reader.GetString(2);
-                                int phoneNumber = reader.GetInt32(3); // Read as integer
+                                int userID = reader.IsDBNull(0) ? 0 : reader.GetInt32(0);
+                                string firstName = reader.IsDBNull(1) ? string.Empty : reader.GetString(1);
+                                string lastName = reader.IsDBNull(2) ? string.Empty : reader.GetString(2);
+                                int phoneNumber = reader.IsDBNull(3) ? 0 : reader.GetInt32(3);
 
-                                listBoxProfile.Items.Add($"User ID: {userID.ToString()}"); // Convert to string
+                                listBoxProfile.Items.Add($"User ID: {userID}");
                                 listBoxProfile.Items.Add($"Name: {firstName} {lastName}");
-                                listBoxProfile.Items.Add($"Phone Number: {phoneNumber.ToString()}"); // Convert to string
+                                listBoxProfile.Items.Add($"Phone Number: {phoneNumber}");
 
                                 if (membershipType == "Tutor")
                                 {
-                                    string moduleCode = reader.GetString(4);
+                                    string moduleCode = reader.IsDBNull(4) ? string.Empty : reader.GetString(4);
                                     listBoxProfile.Items.Add($"Module Code: {moduleCode}");
                                 }
                             }
@@ -602,8 +635,9 @@ namespace TutoringApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("An error occurred: " + ex.Message);
             }
+
         }
 
         private void btnUpdatePassword_Click(object sender, EventArgs e)
@@ -674,6 +708,8 @@ namespace TutoringApp
             if (result == DialogResult.Yes)
             {   
                 this.Close();
+                Welcome welcome = new Welcome();
+                welcome.Show();
             }
         }
     }

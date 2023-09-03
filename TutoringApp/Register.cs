@@ -15,8 +15,8 @@ namespace TutoringApp
 {
     public partial class Register : Form
     {
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\Source\Repos\TutoringApp2\TutoringApp\EduGuide.mdf;Integrated Security=True";
-       
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\flore\OneDrive\Documents\TutoringApp2\TutoringApp\EduGuide.mdf;Integrated Security=True";
+
         public Register()
         {
             InitializeComponent();
@@ -227,10 +227,17 @@ namespace TutoringApp
                     connection.Close();
                 }
             }
-            catch (Exception ex)
+            catch (SqlException ex)
             {
-                // Handle exceptions
-                MessageBox.Show("An error occurred: " + ex.Message);
+                // Handle SQL exceptions
+                if (ex.Number == 2627) // SQL Server error number for unique constraint violation
+                {
+                    MessageBox.Show("User with the same ID already exists. Please choose a different User ID.", "Duplicate User", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -244,6 +251,11 @@ namespace TutoringApp
             this.Close();
             Welcome welcome = new Welcome();
             welcome.Show();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
