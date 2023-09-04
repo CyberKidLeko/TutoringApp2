@@ -37,6 +37,7 @@
             this.btnLogin = new System.Windows.Forms.Button();
             this.checkBoxIsTutor = new System.Windows.Forms.CheckBox();
             this.pbButton = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbButton)).BeginInit();
             this.SuspendLayout();
             // 
@@ -118,12 +119,24 @@
             this.pbButton.TabStop = false;
             this.pbButton.Click += new System.EventHandler(this.pbButton_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(13, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(64, 23);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Admin login";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pbButton);
             this.Controls.Add(this.checkBoxIsTutor);
             this.Controls.Add(this.btnLogin);
@@ -152,5 +165,6 @@
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.CheckBox checkBoxIsTutor;
         private System.Windows.Forms.PictureBox pbButton;
+        private System.Windows.Forms.Button button1;
     }
 }

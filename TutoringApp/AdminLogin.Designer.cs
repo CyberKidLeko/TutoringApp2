@@ -32,7 +32,7 @@
             this.pbButton = new System.Windows.Forms.PictureBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtAdmit_ID = new System.Windows.Forms.TextBox();
+            this.txtAdmin_ID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.User_ID = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@
             this.btnLogin.TabIndex = 13;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPassword
             // 
@@ -68,13 +69,13 @@
             this.txtPassword.TabIndex = 12;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
-            // txtAdmit_ID
+            // txtAdmin_ID
             // 
-            this.txtAdmit_ID.Location = new System.Drawing.Point(366, 127);
-            this.txtAdmit_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtAdmit_ID.Name = "txtAdmit_ID";
-            this.txtAdmit_ID.Size = new System.Drawing.Size(100, 22);
-            this.txtAdmit_ID.TabIndex = 11;
+            this.txtAdmin_ID.Location = new System.Drawing.Point(366, 127);
+            this.txtAdmin_ID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAdmin_ID.Name = "txtAdmin_ID";
+            this.txtAdmin_ID.Size = new System.Drawing.Size(100, 22);
+            this.txtAdmin_ID.TabIndex = 11;
             // 
             // label3
             // 
@@ -113,7 +114,7 @@
             this.Controls.Add(this.pbButton);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.txtAdmit_ID);
+            this.Controls.Add(this.txtAdmin_ID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.User_ID);
@@ -130,7 +131,7 @@
         private System.Windows.Forms.PictureBox pbButton;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtAdmit_ID;
+        private System.Windows.Forms.TextBox txtAdmin_ID;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label User_ID;

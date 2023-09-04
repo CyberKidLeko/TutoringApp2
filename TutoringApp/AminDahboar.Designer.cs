@@ -30,22 +30,22 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dataGridViewAppointmentReport = new System.Windows.Forms.DataGridView();
             this.btnGenerate = new System.Windows.Forms.Button();
+            this.dataGridViewAppointmentReport = new System.Windows.Forms.DataGridView();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnDeleteTutor = new System.Windows.Forms.Button();
             this.btnTutorGenerate = new System.Windows.Forms.Button();
             this.dataGridViewTutorReport = new System.Windows.Forms.DataGridView();
-            this.btnDeleteTutor = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.btnStudentGenerate = new System.Windows.Forms.Button();
             this.dataGridViewStudentReport = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointmentReport)).BeginInit();
+            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTutorReport)).BeginInit();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentReport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,6 +72,26 @@
             this.tabPage1.Text = "Appointments";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnGenerate
+            // 
+            this.btnGenerate.Location = new System.Drawing.Point(6, 342);
+            this.btnGenerate.Name = "btnGenerate";
+            this.btnGenerate.Size = new System.Drawing.Size(156, 23);
+            this.btnGenerate.TabIndex = 1;
+            this.btnGenerate.Text = "Generate Report";
+            this.btnGenerate.UseVisualStyleBackColor = true;
+            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            // 
+            // dataGridViewAppointmentReport
+            // 
+            this.dataGridViewAppointmentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewAppointmentReport.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewAppointmentReport.Name = "dataGridViewAppointmentReport";
+            this.dataGridViewAppointmentReport.RowHeadersWidth = 51;
+            this.dataGridViewAppointmentReport.RowTemplate.Height = 24;
+            this.dataGridViewAppointmentReport.Size = new System.Drawing.Size(756, 330);
+            this.dataGridViewAppointmentReport.TabIndex = 0;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
@@ -85,37 +105,15 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Tutors";
             // 
-            // tabPage3
+            // btnDeleteTutor
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
-            this.tabPage3.Controls.Add(this.btnDeleteStudent);
-            this.tabPage3.Controls.Add(this.btnStudentGenerate);
-            this.tabPage3.Controls.Add(this.dataGridViewStudentReport);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(768, 396);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Students";
-            // 
-            // dataGridViewAppointmentReport
-            // 
-            this.dataGridViewAppointmentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewAppointmentReport.Location = new System.Drawing.Point(6, 6);
-            this.dataGridViewAppointmentReport.Name = "dataGridViewAppointmentReport";
-            this.dataGridViewAppointmentReport.RowHeadersWidth = 51;
-            this.dataGridViewAppointmentReport.RowTemplate.Height = 24;
-            this.dataGridViewAppointmentReport.Size = new System.Drawing.Size(756, 330);
-            this.dataGridViewAppointmentReport.TabIndex = 0;
-            // 
-            // btnGenerate
-            // 
-            this.btnGenerate.Location = new System.Drawing.Point(6, 342);
-            this.btnGenerate.Name = "btnGenerate";
-            this.btnGenerate.Size = new System.Drawing.Size(156, 23);
-            this.btnGenerate.TabIndex = 1;
-            this.btnGenerate.Text = "Generate Report";
-            this.btnGenerate.UseVisualStyleBackColor = true;
-            this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
+            this.btnDeleteTutor.Location = new System.Drawing.Point(302, 354);
+            this.btnDeleteTutor.Name = "btnDeleteTutor";
+            this.btnDeleteTutor.Size = new System.Drawing.Size(155, 23);
+            this.btnDeleteTutor.TabIndex = 4;
+            this.btnDeleteTutor.Text = "Delete Tutor";
+            this.btnDeleteTutor.UseVisualStyleBackColor = true;
+            this.btnDeleteTutor.Click += new System.EventHandler(this.btnDeleteTutor_Click);
             // 
             // btnTutorGenerate
             // 
@@ -137,14 +135,17 @@
             this.dataGridViewTutorReport.Size = new System.Drawing.Size(756, 330);
             this.dataGridViewTutorReport.TabIndex = 2;
             // 
-            // btnDeleteTutor
+            // tabPage3
             // 
-            this.btnDeleteTutor.Location = new System.Drawing.Point(302, 354);
-            this.btnDeleteTutor.Name = "btnDeleteTutor";
-            this.btnDeleteTutor.Size = new System.Drawing.Size(155, 23);
-            this.btnDeleteTutor.TabIndex = 4;
-            this.btnDeleteTutor.Text = "Delete Tutor";
-            this.btnDeleteTutor.UseVisualStyleBackColor = true;
+            this.tabPage3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
+            this.tabPage3.Controls.Add(this.btnDeleteStudent);
+            this.tabPage3.Controls.Add(this.btnStudentGenerate);
+            this.tabPage3.Controls.Add(this.dataGridViewStudentReport);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(768, 396);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Students";
             // 
             // btnDeleteStudent
             // 
@@ -154,6 +155,7 @@
             this.btnDeleteStudent.TabIndex = 7;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = true;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // btnStudentGenerate
             // 
@@ -187,10 +189,10 @@
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointmentReport)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTutorReport)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewStudentReport)).EndInit();
             this.ResumeLayout(false);
 

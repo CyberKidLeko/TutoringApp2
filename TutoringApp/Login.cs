@@ -127,5 +127,17 @@ namespace TutoringApp
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the AdminLogin form
+            AdminLogin adminLoginForm = new AdminLogin();
+
+            // Hide the current form
+            this.Hide();
+
+            // Show the AdminLogin form
+            adminLoginForm.Show();
+        }
     }
 }
