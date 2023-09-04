@@ -61,7 +61,7 @@
             this.btnUpdateModule1 = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.cmbUpdateModule1 = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.lblChangeModule1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.Dash.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -373,7 +373,7 @@
             this.groupBox2.Controls.Add(this.btnUpdateModule1);
             this.groupBox2.Controls.Add(this.label20);
             this.groupBox2.Controls.Add(this.cmbUpdateModule1);
-            this.groupBox2.Controls.Add(this.label17);
+            this.groupBox2.Controls.Add(this.lblChangeModule1);
             this.groupBox2.Location = new System.Drawing.Point(11, 214);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox2.Name = "groupBox2";
@@ -404,7 +404,7 @@
             // 
             // btnUpdateModule1
             // 
-            this.btnUpdateModule1.Location = new System.Drawing.Point(335, 15);
+            this.btnUpdateModule1.Location = new System.Drawing.Point(335, 16);
             this.btnUpdateModule1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateModule1.Name = "btnUpdateModule1";
             this.btnUpdateModule1.Size = new System.Drawing.Size(125, 23);
@@ -432,14 +432,14 @@
             this.cmbUpdateModule1.TabIndex = 16;
             this.cmbUpdateModule1.SelectedIndexChanged += new System.EventHandler(this.cmbUpdateModule1_SelectedIndexChanged);
             // 
-            // label17
+            // lblChangeModule1
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(5, 18);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(115, 16);
-            this.label17.TabIndex = 15;
-            this.label17.Text = "Change Module 1:";
+            this.lblChangeModule1.AutoSize = true;
+            this.lblChangeModule1.Location = new System.Drawing.Point(5, 18);
+            this.lblChangeModule1.Name = "lblChangeModule1";
+            this.lblChangeModule1.Size = new System.Drawing.Size(115, 16);
+            this.lblChangeModule1.TabIndex = 15;
+            this.lblChangeModule1.Text = "Change Module 1:";
             // 
             // label8
             // 
@@ -500,7 +500,7 @@
         private System.Windows.Forms.TextBox txtUpdatePhone;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.ComboBox cmbUpdateModule1;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label lblChangeModule1;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnUpdatePassword;
         private System.Windows.Forms.Button btnLogout;

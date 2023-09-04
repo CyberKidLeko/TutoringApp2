@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
@@ -15,7 +16,7 @@ namespace TutoringApp
 {
     public partial class Register : Form
     {
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\Source\Repos\TutoringApp2\TutoringApp\EduGuide.mdf;Integrated Security=True";
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\EduGuide.mdf;Integrated Security=True";
        
         public Register()
         {
@@ -122,15 +123,23 @@ namespace TutoringApp
                 errorProvider1.SetError(txtSurname, "Surname is required");
             }
 
-            if (!int.TryParse(txtUserID .Text, out User_ID))
+            if (!int.TryParse(txtUserID.Text, out User_ID))
             {
                 errorProvider1.SetError(txtUserID, "User ID is required");
             }
+           
 
             if (!int.TryParse(txtPhone.Text, out phone))
             {
                 errorProvider1.SetError(txtPhone, "Phone number is required");
             }
+            else if (!Regex.IsMatch(txtPhone.Text, @"^\d{9}$"))
+            {
+                errorProvider1.SetError(txtPhone, "Phone number must be 9 digits long");
+                MessageBox.Show("Phone number must be 9 digits long.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
 
 
 

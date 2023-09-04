@@ -21,7 +21,8 @@ namespace TutoringApp
         {
             Welcome welcome = new Welcome();
             welcome.Show();
-            this.Hide();
+            this.WindowState = FormWindowState.Minimized;
+
 
         }
     }

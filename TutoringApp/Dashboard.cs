@@ -17,8 +17,9 @@ namespace TutoringApp
         public string loggedInUsername;
         public string loggedInPassword;
         public string membershipType;
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\nkulu\OneDrive\Desktop\LatestTutorApp\TutoringApp\EduGuide.mdf;Integrated Security=True";
-        
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\EduGuide.mdf;Integrated Security=True";
+
+
         public Dashboard()
         {
             InitializeComponent();
@@ -41,7 +42,9 @@ namespace TutoringApp
             else if (membershipType == "Student")
             {
                 // Set controls visible for students
-                // ... control visibility settings for students ...
+                lblChangeModule1.Visible= false;
+                cmbUpdateModule1.Visible=false;
+                btnUpdateModule1.Visible = false;
             }
         }
 
