@@ -38,34 +38,40 @@
             this.checkBoxIsTutor = new System.Windows.Forms.CheckBox();
             this.pbButton = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // User_ID
             // 
             this.User_ID.AutoSize = true;
-            this.User_ID.Location = new System.Drawing.Point(272, 135);
+            this.User_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.User_ID.Location = new System.Drawing.Point(272, 129);
             this.User_ID.Name = "User_ID";
-            this.User_ID.Size = new System.Drawing.Size(73, 16);
+            this.User_ID.Size = new System.Drawing.Size(90, 18);
             this.User_ID.TabIndex = 0;
             this.User_ID.Text = "Username:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(275, 170);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 16);
+            this.label2.Size = new System.Drawing.Size(88, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(328, 85);
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(708, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 32);
+            this.label3.Size = new System.Drawing.Size(92, 34);
             this.label3.TabIndex = 2;
             this.label3.Text = "Login";
             // 
@@ -88,10 +94,10 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(380, 265);
+            this.btnLogin.Location = new System.Drawing.Point(317, 280);
             this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 23);
+            this.btnLogin.Size = new System.Drawing.Size(88, 26);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
@@ -100,10 +106,11 @@
             // checkBoxIsTutor
             // 
             this.checkBoxIsTutor.AutoSize = true;
-            this.checkBoxIsTutor.Location = new System.Drawing.Point(351, 228);
+            this.checkBoxIsTutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBoxIsTutor.Location = new System.Drawing.Point(306, 224);
             this.checkBoxIsTutor.Margin = new System.Windows.Forms.Padding(4);
             this.checkBoxIsTutor.Name = "checkBoxIsTutor";
-            this.checkBoxIsTutor.Size = new System.Drawing.Size(120, 20);
+            this.checkBoxIsTutor.Size = new System.Drawing.Size(149, 22);
             this.checkBoxIsTutor.TabIndex = 6;
             this.checkBoxIsTutor.Text = "are you a tutor?";
             this.checkBoxIsTutor.UseVisualStyleBackColor = true;
@@ -130,12 +137,23 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(69, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(111, 120);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pbButton);
             this.Controls.Add(this.checkBoxIsTutor);
@@ -150,6 +168,7 @@
             this.Text = "Login";
             this.Load += new System.EventHandler(this.Login_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.pbButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,5 +185,6 @@
         private System.Windows.Forms.CheckBox checkBoxIsTutor;
         private System.Windows.Forms.PictureBox pbButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

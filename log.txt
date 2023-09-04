@@ -1,0 +1,149 @@
+commit f9b69e4f45660ae12d10ffb6600e37588f089b87
+Author: gooner08 <tambaniramahala250@gmail.com>
+Date:   Mon Sep 4 21:46:14 2023 +0200
+
+    admin delete functional
+
+commit 813384c5fe8ea9c5ce36eac430e1461974fa16f5
+Author: gooner08 <tambaniramahala250@gmail.com>
+Date:   Mon Sep 4 20:51:17 2023 +0200
+
+    admin stuff started
+
+commit 956516d8ec65921502367683747225cef26018e8
+Author: gooner08 <tambaniramahala250@gmail.com>
+Date:   Mon Sep 4 20:12:01 2023 +0200
+
+    few bugs fixed
+
+commit 75104b6f1de6a2eee2422b8aa021fd63a49fe37f
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Mon Sep 4 00:39:10 2023 +0200
+
+    cmbFilterByModule bug fixed
+
+commit e4a8d1fc42ad928b200c200bd4f97d649fdd6ea9
+Author: CyberKidLeko <125137203+CyberKidLeko@users.noreply.github.com>
+Date:   Mon Sep 4 00:38:20 2023 +0200
+
+    Update .gitignore
+
+commit 0218b99d10537df720721e874bb933c885ba2525
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Sat Sep 2 15:43:58 2023 +0200
+
+    -password on login page switched to passwordChar
+
+commit 9c21e78228eff844c30f88fdc7e7706c0782025e
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Sat Sep 2 15:19:02 2023 +0200
+
+    -back buttons added on register & login page
+    -removed messagebox output for incorrent input and added errorProvider
+    -changed userID type to int
+    -input validation for password on register page added
+
+commit ed7b888bdc6ccc5dde6e99993a3d7067143c4f09
+Merge: 3c6e9a6 2d2c31a
+Author: CyberKidLeko <125137203+CyberKidLeko@users.noreply.github.com>
+Date:   Sat Sep 2 13:48:59 2023 +0200
+
+    Merge pull request #1 from CyberKidLeko/tryStuff
+    
+    log out button coded
+
+commit 2d2c31a1a481965ba0d77adbee2ddd9d8742d799
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Sat Sep 2 13:45:17 2023 +0200
+
+    log out button coded
+
+commit 3c6e9a6b6f2350ee337759faabd0ffe09d2d3e0d
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Fri Sep 1 20:24:41 2023 +0200
+
+    -Updated background colours
+    -Remamed variables in the profile tab in dashboard
+    -Filled the comboboxes in update field
+
+commit 3d4319e1f6124f36d8b5060dfdbf32c947730f62
+Merge: 4a683f0 b376198
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Fri Sep 1 18:22:47 2023 +0200
+
+    Merge branch 'master' of https://github.com/CyberKidLeko/TutoringApp2
+
+commit 4a683f0e64dbac70e445b4eb7aa884192da3705b
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Fri Sep 1 18:22:16 2023 +0200
+
+    nothing much
+
+commit b376198af8c896afed292ef5389c40d8b4cb1cfc
+Author: CyberKidLeko <125137203+CyberKidLeko@users.noreply.github.com>
+Date:   Fri Sep 1 18:21:42 2023 +0200
+
+    Update .gitignore
+
+commit b8c3abd5e582bf6eb64bd0ea7f4bfd6dcdd1954d
+Author: CyberKidLeko <125137203+CyberKidLeko@users.noreply.github.com>
+Date:   Fri Sep 1 18:19:13 2023 +0200
+
+    Update .gitignore
+
+commit d16aec7386af7d267f07f6d078611ffb69617fad
+Merge: 499f4c5 c5a8521
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Fri Sep 1 18:10:39 2023 +0200
+
+    Merge branch 'master' of https://github.com/CyberKidLeko/TutoringApp2
+
+commit 499f4c5a04a47ba6765b9c4e5813474d6c89d287
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Fri Sep 1 18:10:05 2023 +0200
+
+    -Removed Database from gitignore
+    -Database Added
+
+commit c5a852199acaa0ce3844b1efe7fa60c9c0493aae
+Author: CyberKidLeko <125137203+CyberKidLeko@users.noreply.github.com>
+Date:   Fri Sep 1 18:08:22 2023 +0200
+
+    Update .gitignore
+
+commit d6edacf1f0c4ce0cf19c2b9b35ea8b0adb8836e3
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Fri Sep 1 17:38:28 2023 +0200
+
+    changed stuff
+
+commit f8ee7b405b474811f010927336179a70badb7e77
+Merge: 5d94591 1c084dc
+Author: kanayochi <jozzephokeke@gmail.com>
+Date:   Fri Sep 1 03:15:27 2023 +0200
+
+    merged,i think.
+
+commit 5d9459198a44c93413d04a917628b7838cb8c6d5
+Author: kanayochi <jozzephokeke@gmail.com>
+Date:   Fri Sep 1 03:11:32 2023 +0200
+
+    Daabase and tables completed
+
+commit 1c084dcbefaee381239a7a5131af5805e658a7af
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Thu Aug 31 14:02:02 2023 +0200
+
+    changed the background colours
+
+commit eb21a618543103b07d8b35c72689a090e70eb3a5
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Tue Aug 29 20:18:53 2023 +0200
+
+    Add project files.
+
+commit 06eac304e088d646748162a6f9dd0771b7e56512
+Author: CyberKidLeko <nkululekongwenya123@gmail.com>
+Date:   Tue Aug 29 20:18:49 2023 +0200
+
+    Add .gitattributes and .gitignore.

@@ -72,6 +72,12 @@ namespace TutoringApp
                 }
             }
 
+        private void pbButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Welcome welcome = new Welcome();
+            welcome.Show();
         }
+    }
     }
 

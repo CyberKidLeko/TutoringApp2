@@ -63,6 +63,7 @@
             this.cmbUpdateModule1 = new System.Windows.Forms.ComboBox();
             this.lblChangeModule1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Dash.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointments)).BeginInit();
@@ -368,6 +369,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.btnUpdatePhone);
             this.groupBox2.Controls.Add(this.txtUpdatePhone);
             this.groupBox2.Controls.Add(this.btnUpdateModule1);
@@ -450,6 +452,15 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Profile";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(126, 60);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(28, 16);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "+27";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -516,5 +527,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListBox listBoxProfile;
+        private System.Windows.Forms.Label label2;
     }
 }

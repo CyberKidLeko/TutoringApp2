@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TutoringApp
 {
@@ -37,6 +38,50 @@ namespace TutoringApp
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Create a SqlCommand to execute the query
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM Appointment", connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable appointmentsTable = new DataTable();
+                        adapter.Fill(appointmentsTable);
+
+                        // Specify the relative file path to save the report
+                        string relativeFilePath = "appointment_report.txt";
+                        string fullPath = Path.GetFullPath(relativeFilePath); // Get the full path
+
+                        using (StreamWriter writer = new StreamWriter(fullPath))
+                        {
+                            // Prepare the report content
+                            writer.WriteLine($"Report Page: {DateTime.Now}");
+                            writer.WriteLine($"Total Entries: {appointmentsTable.Rows.Count}");
+                            writer.WriteLine();
+
+                            // Add details for each appointment
+                            foreach (DataRow row in appointmentsTable.Rows)
+                            {
+                                writer.WriteLine($"Appointment ID: {row["Appointment_ID"]}");
+                                writer.WriteLine($"Student ID: {row["Student_ID"]}");
+                                writer.WriteLine($"Tutor ID: {row["Tutor_ID"]}");
+                                writer.WriteLine($"Module Code: {row["Module_Code"]}");
+                                writer.WriteLine($"Date: {row["Date"]}");
+                                writer.WriteLine();
+                            }
+                        }
+
+                        MessageBox.Show($"Report generated and saved successfully at: {fullPath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
@@ -231,6 +276,101 @@ namespace TutoringApp
             }
         }
 
+        private void btnStudentGenerate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
 
+                    // Create a SqlCommand to execute the query
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM Student", connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable studentTable = new DataTable();
+                        adapter.Fill(studentTable);
+
+                        // Specify the relative file path to save the report
+                        string relativeFilePath = "student_report.txt";
+                        string fullPath = Path.GetFullPath(relativeFilePath); // Get the full path
+
+                        using (StreamWriter writer = new StreamWriter(fullPath))
+                        {
+                            // Prepare the report content
+                            writer.WriteLine($"Report Page: {DateTime.Now}");
+                            writer.WriteLine($"Total Entries: {studentTable.Rows.Count}");
+                            writer.WriteLine();
+
+                            // Add details for each student
+                            foreach (DataRow row in studentTable.Rows)
+                            {
+                                writer.WriteLine($"Student ID: {row["Student_ID"]}");
+                                writer.WriteLine($"First Name: {row["Student_FirstName"]}");
+                                writer.WriteLine($"Last Name: {row["Student_LastName"]}");
+                                writer.WriteLine($"Phone Number: {row["Phone_Number"]}");
+                                writer.WriteLine();
+                            }
+                        }
+
+                        MessageBox.Show($"Report generated and saved successfully at: {fullPath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void btnTutorGenerate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    // Create a SqlCommand to execute the query
+                    using (SqlCommand command = new SqlCommand("SELECT * FROM Tutor", connection))
+                    {
+                        SqlDataAdapter adapter = new SqlDataAdapter(command);
+                        DataTable tutorTable = new DataTable();
+                        adapter.Fill(tutorTable);
+
+                        // Specify the relative file path to save the report
+                        string relativeFilePath = "tutor_report.txt";
+                        string fullPath = Path.GetFullPath(relativeFilePath); // Get the full path
+
+                        using (StreamWriter writer = new StreamWriter(fullPath))
+                        {
+                            // Prepare the report content
+                            writer.WriteLine($"Report Page: {DateTime.Now}");
+                            writer.WriteLine($"Total Entries: {tutorTable.Rows.Count}");
+                            writer.WriteLine();
+
+                            // Add details for each tutor
+                            foreach (DataRow row in tutorTable.Rows)
+                            {
+                                writer.WriteLine($"Tutor ID: {row["Tutor_ID"]}");
+                                writer.WriteLine($"First Name: {row["Tutor_FirstName"]}");
+                                writer.WriteLine($"Last Name: {row["Tutor_LastName"]}");
+                                writer.WriteLine($"Phone Number: {row["Phone_Number"]}");
+                                writer.WriteLine($"Module Code: {row["Module_Code"]}");
+                                writer.WriteLine();
+                            }
+                        }
+
+                        MessageBox.Show($"Report generated and saved successfully at: {fullPath}", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

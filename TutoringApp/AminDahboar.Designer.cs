@@ -62,6 +62,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(124)))), ((int)(((byte)(158)))));
             this.tabPage1.Controls.Add(this.btnGenerate);
             this.tabPage1.Controls.Add(this.dataGridViewAppointmentReport);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -70,7 +71,6 @@
             this.tabPage1.Size = new System.Drawing.Size(768, 396);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Appointments";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // btnGenerate
             // 
@@ -84,6 +84,7 @@
             // 
             // dataGridViewAppointmentReport
             // 
+            this.dataGridViewAppointmentReport.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridViewAppointmentReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAppointmentReport.Location = new System.Drawing.Point(6, 6);
             this.dataGridViewAppointmentReport.Name = "dataGridViewAppointmentReport";
@@ -123,6 +124,7 @@
             this.btnTutorGenerate.TabIndex = 3;
             this.btnTutorGenerate.Text = "Generate Report";
             this.btnTutorGenerate.UseVisualStyleBackColor = true;
+            this.btnTutorGenerate.Click += new System.EventHandler(this.btnTutorGenerate_Click);
             // 
             // dataGridViewTutorReport
             // 
@@ -165,6 +167,7 @@
             this.btnStudentGenerate.TabIndex = 6;
             this.btnStudentGenerate.Text = "Generate Report";
             this.btnStudentGenerate.UseVisualStyleBackColor = true;
+            this.btnStudentGenerate.Click += new System.EventHandler(this.btnStudentGenerate_Click);
             // 
             // dataGridViewStudentReport
             // 
