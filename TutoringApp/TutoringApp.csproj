@@ -82,6 +82,12 @@
     <Compile Include="AdminLogin.Designer.cs">
       <DependentUpon>AdminLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="AminDahboar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AminDahboar.Designer.cs">
+      <DependentUpon>AminDahboar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="AdminLogin.resx">
       <DependentUpon>AdminLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AminDahboar.resx">
+      <DependentUpon>AminDahboar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

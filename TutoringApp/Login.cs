@@ -122,5 +122,10 @@ namespace TutoringApp
             Welcome welcome = new Welcome();    
             welcome.Show(); 
         }
+
+        private void Login_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
