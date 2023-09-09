@@ -121,7 +121,7 @@ namespace TutoringApp
             }
             else
             {
-                // Handle other user types if needed
+                // guys here Handle other user types if needed,like if we still want admin here
             }
         }
 
@@ -175,7 +175,7 @@ namespace TutoringApp
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            string username = loggedInUsername; // Use the actual username from the login form
+            string username = loggedInUsername; 
             string membershipType = MembershipType;
             PopulateProfileListBox();
 
@@ -185,7 +185,7 @@ namespace TutoringApp
                 {
                     connection.Open();
 
-                    // Populate the ComboBoxes with module codes
+                    // Populate the ComboBoxes with module
                     string moduleQuery = "SELECT Module_Code FROM Module";
 
                     using (SqlCommand command = new SqlCommand(moduleQuery, connection))
@@ -220,7 +220,7 @@ namespace TutoringApp
 
         private void PopulateModuleComboBox()
         {
-            // Clear existing items in the ComboBox
+            
             cmbFilterByModule.Items.Clear();
 
             try
@@ -267,7 +267,7 @@ namespace TutoringApp
                 {
                     connection.Open();
 
-                    // SQL query to filter and retrieve data from the 'Tutor' table based on Module_Code
+                    // SQL query to filter and retrieve data from the Tutor table based on Module_Code
                     string sqlQuery = $"SELECT Tutor_ID, Tutor_FirstName, Tutor_LastName, Module_Code FROM Tutor WHERE Module_Code LIKE '%{keyword}%'";
 
                     using (SqlCommand command = new SqlCommand(sqlQuery, connection))
@@ -472,7 +472,7 @@ namespace TutoringApp
                 return;
             }
 
-            // Assuming you have a column named "Appointment_ID" in your DataGridView
+            
             int appointmentID = Convert.ToInt32(dataGridViewAppointments.SelectedRows[0].Cells["Appointment_ID"].Value);
 
             try
@@ -517,12 +517,12 @@ namespace TutoringApp
 
         private void cmbFilterByModule_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Get the selected module code from the ComboBox
+            
             string selectedModule = cmbFilterByModule.SelectedItem as string;
 
             if (string.IsNullOrEmpty(selectedModule))
             {
-                // If no module is selected, show all appointments (you can change this behavior if needed)
+                
                 LoadAppointmentsForUser(loggedInUsername, membershipType);
             }
             else

@@ -44,25 +44,25 @@ namespace TutoringApp
                 {
                     connection.Open();
 
-                    // Create a SqlCommand to execute the query
+                    // SqlCommand to execute the query
                     using (SqlCommand command = new SqlCommand("SELECT * FROM Appointment", connection))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable appointmentsTable = new DataTable();
                         adapter.Fill(appointmentsTable);
 
-                        // Specify the relative file path to save the report
+                        // relative file path to save the report
                         string relativeFilePath = "appointment_report.txt";
                         string fullPath = Path.GetFullPath(relativeFilePath); // Get the full path
 
                         using (StreamWriter writer = new StreamWriter(fullPath))
                         {
-                            // Prepare the report content
+                            // report content
                             writer.WriteLine($"Report Page: {DateTime.Now}");
                             writer.WriteLine($"Total Entries: {appointmentsTable.Rows.Count}");
                             writer.WriteLine();
 
-                            // Add details for each appointment
+                            // here im Adding details for each appointment
                             foreach (DataRow row in appointmentsTable.Rows)
                             {
                                 writer.WriteLine($"Appointment ID: {row["Appointment_ID"]}");
@@ -174,16 +174,16 @@ namespace TutoringApp
 
         private void btnDeleteTutor_Click(object sender, EventArgs e)
         {
-            // Check if any row is selected in the dataGridViewTutorReport
+            // here i was Checking if any row is selected in the dataGridViewTutorReport
             if (dataGridViewTutorReport.SelectedRows.Count > 0)
             {
-                // Get the selected row
+                
                 DataGridViewRow selectedRow = dataGridViewTutorReport.SelectedRows[0];
 
-                // Extract the value from the DataGridView for the Tutor_ID column
+                
                 int tutorID = Convert.ToInt32(selectedRow.Cells["Tutor_ID"].Value);
 
-                // Perform the deletion in your database based on the tutorID
+                //deleting in the database based on the tutorID
                 
                 try
                 {
@@ -200,9 +200,7 @@ namespace TutoringApp
 
                             if (rowsAffected > 0)
                             {
-                                // The row was deleted successfully from the database
-                                // Now im removing the row from the DataGridView
-                                //dataGridViewTutorReport.Rows.Remove(selectedRow);
+                                
                                 PopulateTutorReportData();
                                 
                                 MessageBox.Show("Tutor deleted successfully.");
@@ -247,8 +245,6 @@ namespace TutoringApp
 
                             if (rowsAffected > 0)
                             {
-                                // The row was deleted successfully from the database
-                                //dataGridViewStudentReport.Rows.Remove(selectedRow);
                                 
                                 PopulateStudentReportData();
 
@@ -284,25 +280,25 @@ namespace TutoringApp
                 {
                     connection.Open();
 
-                    // Create a SqlCommand to execute the query
+                    
                     using (SqlCommand command = new SqlCommand("SELECT * FROM Student", connection))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable studentTable = new DataTable();
                         adapter.Fill(studentTable);
 
-                        // Specify the relative file path to save the report
+                        
                         string relativeFilePath = "student_report.txt";
                         string fullPath = Path.GetFullPath(relativeFilePath); // Get the full path
 
                         using (StreamWriter writer = new StreamWriter(fullPath))
                         {
-                            // Prepare the report content
+                            // report content
                             writer.WriteLine($"Report Page: {DateTime.Now}");
                             writer.WriteLine($"Total Entries: {studentTable.Rows.Count}");
                             writer.WriteLine();
 
-                            // Add details for each student
+                            //details for each student
                             foreach (DataRow row in studentTable.Rows)
                             {
                                 writer.WriteLine($"Student ID: {row["Student_ID"]}");
@@ -332,25 +328,25 @@ namespace TutoringApp
                 {
                     connection.Open();
 
-                    // Create a SqlCommand to execute the query
+                    
                     using (SqlCommand command = new SqlCommand("SELECT * FROM Tutor", connection))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
                         DataTable tutorTable = new DataTable();
                         adapter.Fill(tutorTable);
 
-                        // Specify the relative file path to save the report
+                        
                         string relativeFilePath = "tutor_report.txt";
                         string fullPath = Path.GetFullPath(relativeFilePath); // Get the full path
 
                         using (StreamWriter writer = new StreamWriter(fullPath))
                         {
-                            // Prepare the report content
+                            
                             writer.WriteLine($"Report Page: {DateTime.Now}");
                             writer.WriteLine($"Total Entries: {tutorTable.Rows.Count}");
                             writer.WriteLine();
 
-                            // Add details for each tutor
+                            //details for each tutor
                             foreach (DataRow row in tutorTable.Rows)
                             {
                                 writer.WriteLine($"Tutor ID: {row["Tutor_ID"]}");

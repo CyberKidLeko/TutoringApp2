@@ -29,7 +29,7 @@ namespace TutoringApp
         {
             id = txtUser_ID.Text;
             return id;
-        }//
+        }
         private void btnLogin_Click(object sender, EventArgs e)
         {
             String table = " ";
@@ -62,14 +62,14 @@ namespace TutoringApp
                     // Execute the query
                     int count = (int)command.ExecuteScalar();
 
-                    // Close the connection
+                    
                     connection.Close();
 
                     // Check if the login is valid
                     if (count == 1)
                     {
-                        // Login is valid
-                        // Display the message box
+                        //if Login is valid
+                        
                         MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         string membershipType = getMember();
                         Dashboard dash = new Dashboard();
@@ -80,7 +80,7 @@ namespace TutoringApp
                     }
                     else
                     {
-                        // Login is invalid
+                        //if Login is invalid
                         MessageBox.Show("Login unsuccessful\nPlease enter correct details", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
@@ -91,7 +91,7 @@ namespace TutoringApp
             }
             catch (Exception ex)
             {
-                // Handle exceptions
+               
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
             storeID();
@@ -130,7 +130,7 @@ namespace TutoringApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // Create an instance of the AdminLogin form
+            
             AdminLogin adminLoginForm = new AdminLogin();
 
             // Hide the current form
